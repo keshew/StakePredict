@@ -6,17 +6,103 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		867A41B32E000773003C5625 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 867A41AD2E000773003C5625 /* Preview Assets.xcassets */; };
+		867A41B42E000773003C5625 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 867A41AF2E000773003C5625 /* Assets.xcassets */; };
+		867A41B62E000773003C5625 /* StakeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867A41B12E000773003C5625 /* StakeApp.swift */; };
+		867A41BC2E00079E003C5625 /* StakeCustomButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867A41BB2E00079E003C5625 /* StakeCustomButtons.swift */; };
+		867A41C32E0007C8003C5625 /* StakeTextExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867A41C12E0007C8003C5625 /* StakeTextExtension.swift */; };
+		867A41CF2E0007E5003C5625 /* StakeOnboardingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867A41CB2E0007E5003C5625 /* StakeOnboardingModel.swift */; };
+		867A41D02E0007E5003C5625 /* StakeOnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867A41CC2E0007E5003C5625 /* StakeOnboardingView.swift */; };
+		867A41D12E0007E5003C5625 /* StakeOnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867A41CD2E0007E5003C5625 /* StakeOnboardingViewModel.swift */; };
+		867A41D42E00089B003C5625 /* SF-Pro-Display-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 867A41D22E00089B003C5625 /* SF-Pro-Display-Bold.otf */; };
+		867A41D52E00089B003C5625 /* SF-Pro-Display-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 867A41D32E00089B003C5625 /* SF-Pro-Display-Regular.otf */; };
+		867A43232E00263E003C5625 /* StakeLoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867A431F2E00263E003C5625 /* StakeLoginModel.swift */; };
+		867A43242E00263E003C5625 /* StakeLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867A43202E00263E003C5625 /* StakeLoginView.swift */; };
+		867A43252E00263E003C5625 /* StakeLoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867A43212E00263E003C5625 /* StakeLoginViewModel.swift */; };
+		867A44662E00426C003C5625 /* StakeSignInModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867A44622E00426C003C5625 /* StakeSignInModel.swift */; };
+		867A44672E00426C003C5625 /* StakeSignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867A44632E00426C003C5625 /* StakeSignInView.swift */; };
+		867A44682E00426C003C5625 /* StakeSignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867A44642E00426C003C5625 /* StakeSignInViewModel.swift */; };
+		86A1CA662E02AE2F00205AF8 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A1CA632E02AE2F00205AF8 /* NetworkManager.swift */; };
+		86A1CB642E02D68F00205AF8 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A1CB622E02D68F00205AF8 /* UserDefaultsManager.swift */; };
+		86B5B3542E00AE6C0010C06B /* StakeMainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B5B3502E00AE6C0010C06B /* StakeMainModel.swift */; };
+		86B5B3552E00AE6C0010C06B /* StakeMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B5B3512E00AE6C0010C06B /* StakeMainView.swift */; };
+		86B5B3562E00AE6C0010C06B /* StakeMainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B5B3522E00AE6C0010C06B /* StakeMainViewModel.swift */; };
+		86B5B3622E00AEF50010C06B /* StakeMyNotesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B5B35E2E00AEF50010C06B /* StakeMyNotesModel.swift */; };
+		86B5B3632E00AEF50010C06B /* StakeMyNotesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B5B35F2E00AEF50010C06B /* StakeMyNotesView.swift */; };
+		86B5B3642E00AEF50010C06B /* StakeMyNotesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B5B3602E00AEF50010C06B /* StakeMyNotesViewModel.swift */; };
+		86B5B3702E00B2830010C06B /* StakeCreateMyNoteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B5B36C2E00B2830010C06B /* StakeCreateMyNoteModel.swift */; };
+		86B5B3712E00B2830010C06B /* StakeCreateMyNoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B5B36D2E00B2830010C06B /* StakeCreateMyNoteView.swift */; };
+		86B5B3722E00B2830010C06B /* StakeCreateMyNoteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B5B36E2E00B2830010C06B /* StakeCreateMyNoteViewModel.swift */; };
+		86B5B37E2E00BB120010C06B /* StakePredictionsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B5B37A2E00BB120010C06B /* StakePredictionsModel.swift */; };
+		86B5B37F2E00BB120010C06B /* StakePredictionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B5B37B2E00BB120010C06B /* StakePredictionsView.swift */; };
+		86B5B3802E00BB120010C06B /* StakePredictionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B5B37C2E00BB120010C06B /* StakePredictionsViewModel.swift */; };
+		86B5B38C2E00BF410010C06B /* StakeTeamNotesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B5B3882E00BF410010C06B /* StakeTeamNotesModel.swift */; };
+		86B5B38D2E00BF410010C06B /* StakeTeamNotesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B5B3892E00BF410010C06B /* StakeTeamNotesView.swift */; };
+		86B5B38E2E00BF410010C06B /* StakeTeamNotesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B5B38A2E00BF410010C06B /* StakeTeamNotesViewModel.swift */; };
+		86B5B39A2E00C1BA0010C06B /* StakeCreateTeamNoteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B5B3962E00C1BA0010C06B /* StakeCreateTeamNoteModel.swift */; };
+		86B5B39B2E00C1BA0010C06B /* StakeCreateTeamNoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B5B3972E00C1BA0010C06B /* StakeCreateTeamNoteView.swift */; };
+		86B5B39C2E00C1BA0010C06B /* StakeCreateTeamNoteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B5B3982E00C1BA0010C06B /* StakeCreateTeamNoteViewModel.swift */; };
+		86B5B3A82E00C3A60010C06B /* StakeSettingsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B5B3A42E00C3A60010C06B /* StakeSettingsModel.swift */; };
+		86B5B3A92E00C3A60010C06B /* StakeSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B5B3A52E00C3A60010C06B /* StakeSettingsView.swift */; };
+		86B5B3AA2E00C3A60010C06B /* StakeSettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B5B3A62E00C3A60010C06B /* StakeSettingsViewModel.swift */; };
+		86BE100E2E01779F00A32D1A /* StakeEditModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86BE100A2E01779F00A32D1A /* StakeEditModel.swift */; };
+		86BE100F2E01779F00A32D1A /* StakeEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86BE100B2E01779F00A32D1A /* StakeEditView.swift */; };
+		86BE10102E01779F00A32D1A /* StakeEditViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86BE100C2E01779F00A32D1A /* StakeEditViewModel.swift */; };
+		86E21E062E01F2FF0068AA0F /* StakeCreatePredictionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E21E022E01F2FF0068AA0F /* StakeCreatePredictionModel.swift */; };
+		86E21E072E01F2FF0068AA0F /* StakeCreatePredictionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E21E032E01F2FF0068AA0F /* StakeCreatePredictionView.swift */; };
+		86E21E082E01F2FF0068AA0F /* StakeCreatePredictionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E21E042E01F2FF0068AA0F /* StakeCreatePredictionViewModel.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		867A419C2E000757003C5625 /* Stake.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stake.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		867A41AD2E000773003C5625 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		867A41AF2E000773003C5625 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		867A41B12E000773003C5625 /* StakeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StakeApp.swift; sourceTree = "<group>"; };
+		867A41BB2E00079E003C5625 /* StakeCustomButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StakeCustomButtons.swift; sourceTree = "<group>"; };
+		867A41C12E0007C8003C5625 /* StakeTextExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StakeTextExtension.swift; sourceTree = "<group>"; };
+		867A41CB2E0007E5003C5625 /* StakeOnboardingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StakeOnboardingModel.swift; sourceTree = "<group>"; };
+		867A41CC2E0007E5003C5625 /* StakeOnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StakeOnboardingView.swift; sourceTree = "<group>"; };
+		867A41CD2E0007E5003C5625 /* StakeOnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StakeOnboardingViewModel.swift; sourceTree = "<group>"; };
+		867A41D22E00089B003C5625 /* SF-Pro-Display-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Bold.otf"; sourceTree = "<group>"; };
+		867A41D32E00089B003C5625 /* SF-Pro-Display-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Regular.otf"; sourceTree = "<group>"; };
+		867A41D62E0008BE003C5625 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		867A431F2E00263E003C5625 /* StakeLoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StakeLoginModel.swift; sourceTree = "<group>"; };
+		867A43202E00263E003C5625 /* StakeLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StakeLoginView.swift; sourceTree = "<group>"; };
+		867A43212E00263E003C5625 /* StakeLoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StakeLoginViewModel.swift; sourceTree = "<group>"; };
+		867A44622E00426C003C5625 /* StakeSignInModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StakeSignInModel.swift; sourceTree = "<group>"; };
+		867A44632E00426C003C5625 /* StakeSignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StakeSignInView.swift; sourceTree = "<group>"; };
+		867A44642E00426C003C5625 /* StakeSignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StakeSignInViewModel.swift; sourceTree = "<group>"; };
+		86A1CA632E02AE2F00205AF8 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		86A1CB622E02D68F00205AF8 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
+		86B5B3502E00AE6C0010C06B /* StakeMainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StakeMainModel.swift; sourceTree = "<group>"; };
+		86B5B3512E00AE6C0010C06B /* StakeMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StakeMainView.swift; sourceTree = "<group>"; };
+		86B5B3522E00AE6C0010C06B /* StakeMainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StakeMainViewModel.swift; sourceTree = "<group>"; };
+		86B5B35E2E00AEF50010C06B /* StakeMyNotesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StakeMyNotesModel.swift; sourceTree = "<group>"; };
+		86B5B35F2E00AEF50010C06B /* StakeMyNotesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StakeMyNotesView.swift; sourceTree = "<group>"; };
+		86B5B3602E00AEF50010C06B /* StakeMyNotesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StakeMyNotesViewModel.swift; sourceTree = "<group>"; };
+		86B5B36C2E00B2830010C06B /* StakeCreateMyNoteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StakeCreateMyNoteModel.swift; sourceTree = "<group>"; };
+		86B5B36D2E00B2830010C06B /* StakeCreateMyNoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StakeCreateMyNoteView.swift; sourceTree = "<group>"; };
+		86B5B36E2E00B2830010C06B /* StakeCreateMyNoteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StakeCreateMyNoteViewModel.swift; sourceTree = "<group>"; };
+		86B5B37A2E00BB120010C06B /* StakePredictionsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StakePredictionsModel.swift; sourceTree = "<group>"; };
+		86B5B37B2E00BB120010C06B /* StakePredictionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StakePredictionsView.swift; sourceTree = "<group>"; };
+		86B5B37C2E00BB120010C06B /* StakePredictionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StakePredictionsViewModel.swift; sourceTree = "<group>"; };
+		86B5B3882E00BF410010C06B /* StakeTeamNotesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StakeTeamNotesModel.swift; sourceTree = "<group>"; };
+		86B5B3892E00BF410010C06B /* StakeTeamNotesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StakeTeamNotesView.swift; sourceTree = "<group>"; };
+		86B5B38A2E00BF410010C06B /* StakeTeamNotesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StakeTeamNotesViewModel.swift; sourceTree = "<group>"; };
+		86B5B3962E00C1BA0010C06B /* StakeCreateTeamNoteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StakeCreateTeamNoteModel.swift; sourceTree = "<group>"; };
+		86B5B3972E00C1BA0010C06B /* StakeCreateTeamNoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StakeCreateTeamNoteView.swift; sourceTree = "<group>"; };
+		86B5B3982E00C1BA0010C06B /* StakeCreateTeamNoteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StakeCreateTeamNoteViewModel.swift; sourceTree = "<group>"; };
+		86B5B3A42E00C3A60010C06B /* StakeSettingsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StakeSettingsModel.swift; sourceTree = "<group>"; };
+		86B5B3A52E00C3A60010C06B /* StakeSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StakeSettingsView.swift; sourceTree = "<group>"; };
+		86B5B3A62E00C3A60010C06B /* StakeSettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StakeSettingsViewModel.swift; sourceTree = "<group>"; };
+		86BE100A2E01779F00A32D1A /* StakeEditModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StakeEditModel.swift; sourceTree = "<group>"; };
+		86BE100B2E01779F00A32D1A /* StakeEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StakeEditView.swift; sourceTree = "<group>"; };
+		86BE100C2E01779F00A32D1A /* StakeEditViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StakeEditViewModel.swift; sourceTree = "<group>"; };
+		86E21E022E01F2FF0068AA0F /* StakeCreatePredictionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StakeCreatePredictionModel.swift; sourceTree = "<group>"; };
+		86E21E032E01F2FF0068AA0F /* StakeCreatePredictionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StakeCreatePredictionView.swift; sourceTree = "<group>"; };
+		86E21E042E01F2FF0068AA0F /* StakeCreatePredictionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StakeCreatePredictionViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		867A419E2E000757003C5625 /* Stake */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = Stake;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		867A41992E000757003C5625 /* Frameworks */ = {
@@ -32,7 +118,7 @@
 		867A41932E000757003C5625 = {
 			isa = PBXGroup;
 			children = (
-				867A419E2E000757003C5625 /* Stake */,
+				867A41B22E000773003C5625 /* Stake */,
 				867A419D2E000757003C5625 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -43,6 +129,227 @@
 				867A419C2E000757003C5625 /* Stake.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		867A41AE2E000773003C5625 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				867A41AD2E000773003C5625 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		867A41B22E000773003C5625 /* Stake */ = {
+			isa = PBXGroup;
+			children = (
+				86E21E052E01F2FF0068AA0F /* StakeCreatePredictionModule */,
+				86BE100D2E01779F00A32D1A /* StakeEditModule */,
+				86B5B3A72E00C3A60010C06B /* StakeSettingsModule */,
+				86B5B3992E00C1BA0010C06B /* StakeCreateTeamNoteModule */,
+				86B5B38B2E00BF410010C06B /* StakeTeamNotesModule */,
+				86B5B37D2E00BB120010C06B /* StakePredictionsModule */,
+				86B5B36F2E00B2830010C06B /* StakeCreateMyNoteModule */,
+				86B5B3612E00AEF50010C06B /* StakeMyNotesModule */,
+				86B5B3532E00AE6C0010C06B /* StakeMainModule */,
+				867A44652E00426C003C5625 /* StakeSignInModule */,
+				867A43222E00263E003C5625 /* StakeLoginModule */,
+				867A41CE2E0007E5003C5625 /* StakeOnboardingModule */,
+				867A41BD2E0007B1003C5625 /* StakeExtension */,
+				867A41B72E000778003C5625 /* StakeHelpers */,
+				86A1CA652E02AE2F00205AF8 /* Managers */,
+				867A41AE2E000773003C5625 /* Preview Content */,
+				867A41AF2E000773003C5625 /* Assets.xcassets */,
+				867A41B12E000773003C5625 /* StakeApp.swift */,
+				867A41D62E0008BE003C5625 /* Info.plist */,
+			);
+			path = Stake;
+			sourceTree = "<group>";
+		};
+		867A41B72E000778003C5625 /* StakeHelpers */ = {
+			isa = PBXGroup;
+			children = (
+				867A41BA2E000793003C5625 /* StakeCustomButtons */,
+				867A41B92E000789003C5625 /* StakeFont */,
+			);
+			path = StakeHelpers;
+			sourceTree = "<group>";
+		};
+		867A41B92E000789003C5625 /* StakeFont */ = {
+			isa = PBXGroup;
+			children = (
+				867A41D22E00089B003C5625 /* SF-Pro-Display-Bold.otf */,
+				867A41D32E00089B003C5625 /* SF-Pro-Display-Regular.otf */,
+			);
+			path = StakeFont;
+			sourceTree = "<group>";
+		};
+		867A41BA2E000793003C5625 /* StakeCustomButtons */ = {
+			isa = PBXGroup;
+			children = (
+				867A41BB2E00079E003C5625 /* StakeCustomButtons.swift */,
+			);
+			path = StakeCustomButtons;
+			sourceTree = "<group>";
+		};
+		867A41BD2E0007B1003C5625 /* StakeExtension */ = {
+			isa = PBXGroup;
+			children = (
+				867A41C22E0007C8003C5625 /* StakeTextExtension */,
+			);
+			path = StakeExtension;
+			sourceTree = "<group>";
+		};
+		867A41C22E0007C8003C5625 /* StakeTextExtension */ = {
+			isa = PBXGroup;
+			children = (
+				867A41C12E0007C8003C5625 /* StakeTextExtension.swift */,
+			);
+			path = StakeTextExtension;
+			sourceTree = "<group>";
+		};
+		867A41CE2E0007E5003C5625 /* StakeOnboardingModule */ = {
+			isa = PBXGroup;
+			children = (
+				867A41CB2E0007E5003C5625 /* StakeOnboardingModel.swift */,
+				867A41CC2E0007E5003C5625 /* StakeOnboardingView.swift */,
+				867A41CD2E0007E5003C5625 /* StakeOnboardingViewModel.swift */,
+			);
+			path = StakeOnboardingModule;
+			sourceTree = "<group>";
+		};
+		867A43222E00263E003C5625 /* StakeLoginModule */ = {
+			isa = PBXGroup;
+			children = (
+				867A431F2E00263E003C5625 /* StakeLoginModel.swift */,
+				867A43202E00263E003C5625 /* StakeLoginView.swift */,
+				867A43212E00263E003C5625 /* StakeLoginViewModel.swift */,
+			);
+			path = StakeLoginModule;
+			sourceTree = "<group>";
+		};
+		867A44652E00426C003C5625 /* StakeSignInModule */ = {
+			isa = PBXGroup;
+			children = (
+				867A44622E00426C003C5625 /* StakeSignInModel.swift */,
+				867A44632E00426C003C5625 /* StakeSignInView.swift */,
+				867A44642E00426C003C5625 /* StakeSignInViewModel.swift */,
+			);
+			path = StakeSignInModule;
+			sourceTree = "<group>";
+		};
+		86A1CA642E02AE2F00205AF8 /* NetworkManager */ = {
+			isa = PBXGroup;
+			children = (
+				86A1CA632E02AE2F00205AF8 /* NetworkManager.swift */,
+			);
+			path = NetworkManager;
+			sourceTree = "<group>";
+		};
+		86A1CA652E02AE2F00205AF8 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				86A1CB632E02D68F00205AF8 /* UserDefaultsManager */,
+				86A1CA642E02AE2F00205AF8 /* NetworkManager */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		86A1CB632E02D68F00205AF8 /* UserDefaultsManager */ = {
+			isa = PBXGroup;
+			children = (
+				86A1CB622E02D68F00205AF8 /* UserDefaultsManager.swift */,
+			);
+			path = UserDefaultsManager;
+			sourceTree = "<group>";
+		};
+		86B5B3532E00AE6C0010C06B /* StakeMainModule */ = {
+			isa = PBXGroup;
+			children = (
+				86B5B3502E00AE6C0010C06B /* StakeMainModel.swift */,
+				86B5B3512E00AE6C0010C06B /* StakeMainView.swift */,
+				86B5B3522E00AE6C0010C06B /* StakeMainViewModel.swift */,
+			);
+			path = StakeMainModule;
+			sourceTree = "<group>";
+		};
+		86B5B3612E00AEF50010C06B /* StakeMyNotesModule */ = {
+			isa = PBXGroup;
+			children = (
+				86B5B35E2E00AEF50010C06B /* StakeMyNotesModel.swift */,
+				86B5B35F2E00AEF50010C06B /* StakeMyNotesView.swift */,
+				86B5B3602E00AEF50010C06B /* StakeMyNotesViewModel.swift */,
+			);
+			path = StakeMyNotesModule;
+			sourceTree = "<group>";
+		};
+		86B5B36F2E00B2830010C06B /* StakeCreateMyNoteModule */ = {
+			isa = PBXGroup;
+			children = (
+				86B5B36C2E00B2830010C06B /* StakeCreateMyNoteModel.swift */,
+				86B5B36D2E00B2830010C06B /* StakeCreateMyNoteView.swift */,
+				86B5B36E2E00B2830010C06B /* StakeCreateMyNoteViewModel.swift */,
+			);
+			path = StakeCreateMyNoteModule;
+			sourceTree = "<group>";
+		};
+		86B5B37D2E00BB120010C06B /* StakePredictionsModule */ = {
+			isa = PBXGroup;
+			children = (
+				86B5B37A2E00BB120010C06B /* StakePredictionsModel.swift */,
+				86B5B37B2E00BB120010C06B /* StakePredictionsView.swift */,
+				86B5B37C2E00BB120010C06B /* StakePredictionsViewModel.swift */,
+			);
+			path = StakePredictionsModule;
+			sourceTree = "<group>";
+		};
+		86B5B38B2E00BF410010C06B /* StakeTeamNotesModule */ = {
+			isa = PBXGroup;
+			children = (
+				86B5B3882E00BF410010C06B /* StakeTeamNotesModel.swift */,
+				86B5B3892E00BF410010C06B /* StakeTeamNotesView.swift */,
+				86B5B38A2E00BF410010C06B /* StakeTeamNotesViewModel.swift */,
+			);
+			path = StakeTeamNotesModule;
+			sourceTree = "<group>";
+		};
+		86B5B3992E00C1BA0010C06B /* StakeCreateTeamNoteModule */ = {
+			isa = PBXGroup;
+			children = (
+				86B5B3962E00C1BA0010C06B /* StakeCreateTeamNoteModel.swift */,
+				86B5B3972E00C1BA0010C06B /* StakeCreateTeamNoteView.swift */,
+				86B5B3982E00C1BA0010C06B /* StakeCreateTeamNoteViewModel.swift */,
+			);
+			path = StakeCreateTeamNoteModule;
+			sourceTree = "<group>";
+		};
+		86B5B3A72E00C3A60010C06B /* StakeSettingsModule */ = {
+			isa = PBXGroup;
+			children = (
+				86B5B3A42E00C3A60010C06B /* StakeSettingsModel.swift */,
+				86B5B3A52E00C3A60010C06B /* StakeSettingsView.swift */,
+				86B5B3A62E00C3A60010C06B /* StakeSettingsViewModel.swift */,
+			);
+			path = StakeSettingsModule;
+			sourceTree = "<group>";
+		};
+		86BE100D2E01779F00A32D1A /* StakeEditModule */ = {
+			isa = PBXGroup;
+			children = (
+				86BE100A2E01779F00A32D1A /* StakeEditModel.swift */,
+				86BE100B2E01779F00A32D1A /* StakeEditView.swift */,
+				86BE100C2E01779F00A32D1A /* StakeEditViewModel.swift */,
+			);
+			path = StakeEditModule;
+			sourceTree = "<group>";
+		};
+		86E21E052E01F2FF0068AA0F /* StakeCreatePredictionModule */ = {
+			isa = PBXGroup;
+			children = (
+				86E21E022E01F2FF0068AA0F /* StakeCreatePredictionModel.swift */,
+				86E21E032E01F2FF0068AA0F /* StakeCreatePredictionView.swift */,
+				86E21E042E01F2FF0068AA0F /* StakeCreatePredictionViewModel.swift */,
+			);
+			path = StakeCreatePredictionModule;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -59,9 +366,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				867A419E2E000757003C5625 /* Stake */,
 			);
 			name = Stake;
 			packageProductDependencies = (
@@ -109,6 +413,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				867A41B32E000773003C5625 /* Preview Assets.xcassets in Resources */,
+				867A41B42E000773003C5625 /* Assets.xcassets in Resources */,
+				867A41D42E00089B003C5625 /* SF-Pro-Display-Bold.otf in Resources */,
+				867A41D52E00089B003C5625 /* SF-Pro-Display-Regular.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +427,47 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				867A41BC2E00079E003C5625 /* StakeCustomButtons.swift in Sources */,
+				86B5B3702E00B2830010C06B /* StakeCreateMyNoteModel.swift in Sources */,
+				86B5B3712E00B2830010C06B /* StakeCreateMyNoteView.swift in Sources */,
+				86B5B3722E00B2830010C06B /* StakeCreateMyNoteViewModel.swift in Sources */,
+				867A43232E00263E003C5625 /* StakeLoginModel.swift in Sources */,
+				867A43242E00263E003C5625 /* StakeLoginView.swift in Sources */,
+				867A43252E00263E003C5625 /* StakeLoginViewModel.swift in Sources */,
+				867A44662E00426C003C5625 /* StakeSignInModel.swift in Sources */,
+				867A44672E00426C003C5625 /* StakeSignInView.swift in Sources */,
+				86B5B39A2E00C1BA0010C06B /* StakeCreateTeamNoteModel.swift in Sources */,
+				86B5B39B2E00C1BA0010C06B /* StakeCreateTeamNoteView.swift in Sources */,
+				86B5B39C2E00C1BA0010C06B /* StakeCreateTeamNoteViewModel.swift in Sources */,
+				86A1CA662E02AE2F00205AF8 /* NetworkManager.swift in Sources */,
+				86B5B3622E00AEF50010C06B /* StakeMyNotesModel.swift in Sources */,
+				86B5B3632E00AEF50010C06B /* StakeMyNotesView.swift in Sources */,
+				86A1CB642E02D68F00205AF8 /* UserDefaultsManager.swift in Sources */,
+				86B5B3642E00AEF50010C06B /* StakeMyNotesViewModel.swift in Sources */,
+				867A44682E00426C003C5625 /* StakeSignInViewModel.swift in Sources */,
+				867A41C32E0007C8003C5625 /* StakeTextExtension.swift in Sources */,
+				867A41B62E000773003C5625 /* StakeApp.swift in Sources */,
+				867A41CF2E0007E5003C5625 /* StakeOnboardingModel.swift in Sources */,
+				867A41D02E0007E5003C5625 /* StakeOnboardingView.swift in Sources */,
+				86B5B3542E00AE6C0010C06B /* StakeMainModel.swift in Sources */,
+				86B5B3552E00AE6C0010C06B /* StakeMainView.swift in Sources */,
+				86BE100E2E01779F00A32D1A /* StakeEditModel.swift in Sources */,
+				86BE100F2E01779F00A32D1A /* StakeEditView.swift in Sources */,
+				86BE10102E01779F00A32D1A /* StakeEditViewModel.swift in Sources */,
+				86B5B37E2E00BB120010C06B /* StakePredictionsModel.swift in Sources */,
+				86B5B3A82E00C3A60010C06B /* StakeSettingsModel.swift in Sources */,
+				86B5B3A92E00C3A60010C06B /* StakeSettingsView.swift in Sources */,
+				86B5B3AA2E00C3A60010C06B /* StakeSettingsViewModel.swift in Sources */,
+				86B5B38C2E00BF410010C06B /* StakeTeamNotesModel.swift in Sources */,
+				86B5B38D2E00BF410010C06B /* StakeTeamNotesView.swift in Sources */,
+				86B5B38E2E00BF410010C06B /* StakeTeamNotesViewModel.swift in Sources */,
+				86B5B37F2E00BB120010C06B /* StakePredictionsView.swift in Sources */,
+				86B5B3802E00BB120010C06B /* StakePredictionsViewModel.swift in Sources */,
+				86B5B3562E00AE6C0010C06B /* StakeMainViewModel.swift in Sources */,
+				86E21E062E01F2FF0068AA0F /* StakeCreatePredictionModel.swift in Sources */,
+				86E21E072E01F2FF0068AA0F /* StakeCreatePredictionView.swift in Sources */,
+				86E21E082E01F2FF0068AA0F /* StakeCreatePredictionViewModel.swift in Sources */,
+				867A41D12E0007E5003C5625 /* StakeOnboardingViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,18 +604,23 @@
 				DEVELOPMENT_TEAM = 59WWFG63NN;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Stake/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.keshevv.Stake;
+				PRODUCT_BUNDLE_IDENTIFIER = com.keshevv.StakePredict;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -284,18 +638,23 @@
 				DEVELOPMENT_TEAM = 59WWFG63NN;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Stake/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.keshevv.Stake;
+				PRODUCT_BUNDLE_IDENTIFIER = com.keshevv.StakePredict;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
