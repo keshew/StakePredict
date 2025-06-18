@@ -110,9 +110,15 @@ struct StakeCreateTeamNoteView: View {
                             }
                             
                             Button(action: {
-                                stakeCreateTeamNoteModel.saveTeamNote(image: selectedImage) { success in
-                                    if success {
-                                        stakeCreateTeamNoteModel.isBack = true
+                                if let image1 = selectedImage{
+                                    let jpegQuality: CGFloat = 0.0001
+                                    if let jpegData1 = image1.jpegData(compressionQuality: jpegQuality) {
+                                        let image1 = UIImage(data: jpegData1)
+                                        stakeCreateTeamNoteModel.saveTeamNote(image: image1) { success in
+                                            if success {
+                                                stakeCreateTeamNoteModel.isBack = true
+                                            }
+                                        }
                                     }
                                 }
                             }) {

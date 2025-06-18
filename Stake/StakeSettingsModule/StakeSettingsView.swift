@@ -149,6 +149,7 @@ struct StakeSettingsView: View {
                                         Button(action: {
                                             if UserDefaultsManager().isGuest() {
                                                 stakeSettingsModel.isSign = true
+                                                UserDefaultsManager().quitQuest()
                                             } else {
                                                 stakeSettingsModel.quit()
                                             }
@@ -166,6 +167,7 @@ struct StakeSettingsView: View {
                                         Button(action: {
                                             if UserDefaultsManager().isGuest() {
                                                 stakeSettingsModel.isLog = true
+                                                UserDefaultsManager().quitQuest()
                                             } else {
                                                 stakeSettingsModel.showDeleteAlert = true
                                             }
@@ -356,6 +358,7 @@ struct StakeSettingsView: View {
                                     Button(action: {
                                         if UserDefaultsManager().isGuest() {
                                             stakeSettingsModel.isSign = true
+                                            UserDefaultsManager().quitQuest()
                                         } else {
                                             stakeSettingsModel.quit()
                                         }
@@ -373,6 +376,7 @@ struct StakeSettingsView: View {
                                     Button(action: {
                                         if UserDefaultsManager().isGuest() {
                                             stakeSettingsModel.isLog = true
+                                            UserDefaultsManager().quitQuest()
                                         } else {
                                             stakeSettingsModel.showDeleteAlert = true
                                         }

@@ -269,7 +269,7 @@ struct StakePredictionsView: View {
                                                                                             Button(action: {
                                                                                                 NetworkManager.shared.updatePredictionStatus(
                                                                                                     id: prediction.id,
-                                                                                                    email: "testuser@example.com",
+                                                                                                    email: UserDefaultsManager().getEmail() ?? "",
                                                                                                     isPredicted: true,
                                                                                                     isPredictionRight: true
                                                                                                 ) { result in
@@ -299,7 +299,7 @@ struct StakePredictionsView: View {
                                                                                             Button(action: {
                                                                                                 NetworkManager.shared.updatePredictionStatus(
                                                                                                     id: prediction.id,
-                                                                                                    email: "testuser@example.com",
+                                                                                                    email: UserDefaultsManager().getEmail() ?? "",
                                                                                                     isPredicted: true,
                                                                                                     isPredictionRight: false
                                                                                                 ) { result in
@@ -607,7 +607,7 @@ struct StakePredictionsView: View {
                                                                                         Button(action: {
                                                                                             NetworkManager.shared.updatePredictionStatus(
                                                                                                 id: prediction.id,
-                                                                                                email: "testuser@example.com",
+                                                                                                email: UserDefaultsManager().getEmail() ?? "",
                                                                                                 isPredicted: true,
                                                                                                 isPredictionRight: true
                                                                                             ) { result in
@@ -637,7 +637,7 @@ struct StakePredictionsView: View {
                                                                                         Button(action: {
                                                                                             NetworkManager.shared.updatePredictionStatus(
                                                                                                 id: prediction.id,
-                                                                                                email: "testuser@example.com",
+                                                                                                email: UserDefaultsManager().getEmail() ?? "",
                                                                                                 isPredicted: true,
                                                                                                 isPredictionRight: false
                                                                                             ) { result in

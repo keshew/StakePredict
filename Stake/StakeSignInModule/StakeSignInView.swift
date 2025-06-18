@@ -92,7 +92,7 @@ struct StakeSignInView: View {
                                             Rectangle()
                                                 .fill(Color(red: 20/255, green: 117/255, blue: 225/255))
                                                 .overlay {
-                                                    Text("Get Started")
+                                                    Text("Sign in")
                                                         .ProBold(size: 20)
                                                 }
                                                 .frame(height: 55)

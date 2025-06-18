@@ -312,12 +312,20 @@ struct StakeCreatePredictionView: View {
                         }
                         
                         Button(action: {
-                            stakeCreatePredictionModel.savePrediction(
-                                firstTeamImage: selectedImage,
-                                secondTeamImage: selectedImage2
-                            ) { success in
-                                if success {
-                                    stakeCreatePredictionModel.isBack = true
+                            if let image1 = selectedImage, let image2 = selectedImage2 {
+                                let jpegQuality: CGFloat = 0.0001
+                                if let jpegData1 = image1.jpegData(compressionQuality: jpegQuality),
+                                   let jpegData2 = image2.jpegData(compressionQuality: jpegQuality) {
+                                    let image1 = UIImage(data: jpegData1)
+                                       let image2 = UIImage(data: jpegData2)
+                                    stakeCreatePredictionModel.savePrediction(
+                                        firstTeamImage: image1,
+                                        secondTeamImage: image2
+                                    ) { success in
+                                        if success {
+                                            stakeCreatePredictionModel.isBack = true
+                                        }
+                                    }
                                 }
                             }
                         }) {

@@ -309,11 +309,7 @@ struct StakeMainView: View {
                                         .offset(y: -70)
                                     }
                                     .onTapGesture {
-                                        if UserDefaultsManager().isGuest() {
-                                            stakeMainModel.isGuestTapped = true
-                                        } else {
-                                            stakeMainModel.isTeamNotes = true
-                                        }
+                                        stakeMainModel.isTeamNotes = true
                                     }
                                 }
                                 .padding(.horizontal)
@@ -501,12 +497,18 @@ struct StakeMainView: View {
                                                                         .padding(.horizontal, 25)
                                                                     
                                                                     VStack(spacing: 5) {
-                                                                        Text("\(prediction.firstTeamName) VS \(prediction.secondTeamName)")
+                                                                        Text("\(prediction.firstTeamName)")
                                                                             .ProBold(size: 15)
                                                                             .minimumScaleFactor(0.8)
-                                                                        Text(prediction.textOfPrediction)
-                                                                            .Pro(size: 11, color: Color(red: 196/255, green: 197/255, blue: 202/255))
+                                                                        
+                                                                        Text("VS")
+                                                                            .ProBold(size: 11, color: Color(red: 17/255, green: 117/255, blue: 226/255))
                                                                             .minimumScaleFactor(0.8)
+                                                                        
+                                                                        Text("\(prediction.secondTeamName)")
+                                                                            .ProBold(size: 15)
+                                                                            .minimumScaleFactor(0.8)
+                                                                        
                                                                     }
                                                                 }
                                                                 .padding(.horizontal, 10)
@@ -643,11 +645,7 @@ struct StakeMainView: View {
                                     .offset(y: -70)
                                 }
                                 .onTapGesture {
-                                    if UserDefaultsManager().isGuest() {
-                                        stakeMainModel.isGuestTapped = true
-                                    } else {
-                                        stakeMainModel.isTeamNotes = true
-                                    }
+                                    stakeMainModel.isTeamNotes = true
                                 }
                             }
                             .padding(.horizontal)
