@@ -92,20 +92,22 @@ struct StakeMyNotesView: View {
                         }
                         .scrollDisabled(UIScreen.main.bounds.height > 380  ? true : false)
                         
-                        Button(action: {
-                            stakeMyNotesModel.isAdd = true
-                        }) {
-                            Rectangle()
-                                .fill(Color(red: 20/255, green: 117/255, blue: 225/255))
-                                .overlay {
-                                    Image(systemName: "plus")
-                                        .foregroundStyle(.white)
-                                        .font(.system(size: 30, weight: .semibold))
-                                }
-                                .frame(width: 70, height: 65)
-                                .cornerRadius(10)
+                        if !UserDefaultsManager().isGuest() {
+                            Button(action: {
+                                stakeMyNotesModel.isAdd = true
+                            }) {
+                                Rectangle()
+                                    .fill(Color(red: 20/255, green: 117/255, blue: 225/255))
+                                    .overlay {
+                                        Image(systemName: "plus")
+                                            .foregroundStyle(.white)
+                                            .font(.system(size: 30, weight: .semibold))
+                                    }
+                                    .frame(width: 70, height: 65)
+                                    .cornerRadius(10)
+                            }
+                            .position(x: UIScreen.main.bounds.width / 1.1, y: UIScreen.main.bounds.height / 1.15)
                         }
-                        .position(x: UIScreen.main.bounds.width / 1.1, y: UIScreen.main.bounds.height / 1.15)
                     }
                     .fullScreenCover(isPresented: $stakeMyNotesModel.isAdd) {
                         StakeCreateMyNoteView()
@@ -114,7 +116,9 @@ struct StakeMyNotesView: View {
                         StakeMainView()
                     }
                     .onAppear {
-                        stakeMyNotesModel.fetchNotes()
+                        if !UserDefaultsManager().isGuest() {
+                            stakeMyNotesModel.fetchNotes()
+                        }
                     }
                 }
             }
@@ -197,20 +201,22 @@ struct StakeMyNotesView: View {
                     }
                     .scrollDisabled(UIScreen.main.bounds.height > 380  ? true : false)
                     
-                    Button(action: {
-                        stakeMyNotesModel.isAdd = true
-                    }) {
-                        Rectangle()
-                            .fill(Color(red: 20/255, green: 117/255, blue: 225/255))
-                            .overlay {
-                                Image(systemName: "plus")
-                                    .foregroundStyle(.white)
-                                    .font(.system(size: 30, weight: .semibold))
-                            }
-                            .frame(width: 70, height: 65)
-                            .cornerRadius(10)
+                    if !UserDefaultsManager().isGuest() {
+                        Button(action: {
+                            stakeMyNotesModel.isAdd = true
+                        }) {
+                            Rectangle()
+                                .fill(Color(red: 20/255, green: 117/255, blue: 225/255))
+                                .overlay {
+                                    Image(systemName: "plus")
+                                        .foregroundStyle(.white)
+                                        .font(.system(size: 30, weight: .semibold))
+                                }
+                                .frame(width: 70, height: 65)
+                                .cornerRadius(10)
+                        }
+                        .position(x: UIScreen.main.bounds.width / 1.3, y: UIScreen.main.bounds.height / 1.25)
                     }
-                    .position(x: UIScreen.main.bounds.width / 1.3, y: UIScreen.main.bounds.height / 1.25)
                 }
                 .fullScreenCover(isPresented: $stakeMyNotesModel.isAdd) {
                     StakeCreateMyNoteView()
@@ -219,7 +225,9 @@ struct StakeMyNotesView: View {
                     StakeMainView()
                 }
                 .onAppear {
-                    stakeMyNotesModel.fetchNotes()
+                    if !UserDefaultsManager().isGuest() {
+                        stakeMyNotesModel.fetchNotes()
+                    }
                 }
             } else {
                 

@@ -53,7 +53,7 @@ struct StakeOnboardingView: View {
                                         }
                                         
                                         Button(action: {
-                                            stakeOnboardingModel.isLogin = true
+                                            stakeOnboardingModel.isSign = true
                                         }) {
                                             Rectangle()
                                                 .fill(Color(red: 19/255, green: 27/255, blue: 42/255))
@@ -62,6 +62,23 @@ struct StakeOnboardingView: View {
                                                         .stroke(Color(red: 137/255, green: 141/255, blue: 148/255), lineWidth: 1)
                                                         .overlay {
                                                             Text("Create account")
+                                                                .Pro(size: 20, color: Color(red: 197/255, green: 198/255, blue: 205/255))
+                                                        }
+                                                }
+                                                .frame(height: 55)
+                                                .cornerRadius(12)
+                                        }
+                                        
+                                        Button(action: {
+                                            stakeOnboardingModel.isLogin = true
+                                        }) {
+                                            Rectangle()
+                                                .fill(Color(red: 19/255, green: 27/255, blue: 42/255))
+                                                .overlay {
+                                                    RoundedRectangle(cornerRadius: 12)
+                                                        .stroke(Color(red: 137/255, green: 141/255, blue: 148/255), lineWidth: 1)
+                                                        .overlay {
+                                                            Text("Log in")
                                                                 .Pro(size: 20, color: Color(red: 197/255, green: 198/255, blue: 205/255))
                                                         }
                                                 }
@@ -78,12 +95,15 @@ struct StakeOnboardingView: View {
                         }
                         .scrollDisabled(UIScreen.main.bounds.height > 380  ? true : false)
                     }
-                    .fullScreenCover(isPresented: $stakeOnboardingModel.isLogin) {
+                    .fullScreenCover(isPresented: $stakeOnboardingModel.isSign) {
                         StakeSignInView()
                     }
                     
                     .fullScreenCover(isPresented: $stakeOnboardingModel.isStart) {
                         StakeMainView()
+                    }
+                    .fullScreenCover(isPresented: $stakeOnboardingModel.isLogin) {
+                        StakeLoginView()
                     }
                 }
             }
@@ -128,7 +148,7 @@ struct StakeOnboardingView: View {
                                     }
                                     
                                     Button(action: {
-                                        stakeOnboardingModel.isLogin = true
+                                        stakeOnboardingModel.isSign = true
                                     }) {
                                         Rectangle()
                                             .fill(Color(red: 19/255, green: 27/255, blue: 42/255))
@@ -143,22 +163,42 @@ struct StakeOnboardingView: View {
                                             .frame(height: 55)
                                             .cornerRadius(12)
                                     }
+                                    
+                                    Button(action: {
+                                        stakeOnboardingModel.isLogin = true
+                                    }) {
+                                        Rectangle()
+                                            .fill(Color(red: 19/255, green: 27/255, blue: 42/255))
+                                            .overlay {
+                                                RoundedRectangle(cornerRadius: 12)
+                                                    .stroke(Color(red: 137/255, green: 141/255, blue: 148/255), lineWidth: 1)
+                                                    .overlay {
+                                                        Text("Log in")
+                                                            .Pro(size: 20, color: Color(red: 197/255, green: 198/255, blue: 205/255))
+                                                    }
+                                            }
+                                            .frame(height: 55)
+                                            .cornerRadius(12)
+                                    }
                                 }
                             }
                             .padding(.horizontal, 90)
-                            .padding(.top, 30)
+                            .padding(.top, 8)
                         }
                         .padding(.horizontal)
                         .padding(.top, 70)
                     }
                     .scrollDisabled(UIScreen.main.bounds.height > 380  ? true : false)
                 }
-                .fullScreenCover(isPresented: $stakeOnboardingModel.isLogin) {
+                .fullScreenCover(isPresented: $stakeOnboardingModel.isSign) {
                     StakeSignInView()
                 }
                 
                 .fullScreenCover(isPresented: $stakeOnboardingModel.isStart) {
                     StakeMainView()
+                }
+                .fullScreenCover(isPresented: $stakeOnboardingModel.isLogin) {
+                    StakeLoginView()
                 }
             } else {
                 

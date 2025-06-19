@@ -50,12 +50,14 @@ struct StakePredictionsView: View {
                                     
                                     Spacer()
                                     
-                                    Button(action: {
-                                        stakePredictionsModel.isAdd = true
-                                    }) {
-                                        Image(systemName: "plus")
-                                            .foregroundStyle(.white)
-                                            .font(.system(size: 24))
+                                    if !UserDefaultsManager().isGuest() {
+                                        Button(action: {
+                                            stakePredictionsModel.isAdd = true
+                                        }) {
+                                            Image(systemName: "plus")
+                                                .foregroundStyle(.white)
+                                                .font(.system(size: 24))
+                                        }
                                     }
                                 }
                                 .padding(.top, 30)
@@ -356,7 +358,9 @@ struct StakePredictionsView: View {
                         StakeMainView()
                     }
                     .onAppear {
-                        stakePredictionsModel.fetchPredictions()
+                        if !UserDefaultsManager().isGuest() {
+                            stakePredictionsModel.fetchPredictions()
+                        }
                     }
                 }
             }
@@ -388,12 +392,14 @@ struct StakePredictionsView: View {
                                 
                                 Spacer()
                                 
-                                Button(action: {
-                                    stakePredictionsModel.isAdd = true
-                                }) {
-                                    Image(systemName: "plus")
-                                        .foregroundStyle(.white)
-                                        .font(.system(size: 24))
+                                if !UserDefaultsManager().isGuest() {
+                                    Button(action: {
+                                        stakePredictionsModel.isAdd = true
+                                    }) {
+                                        Image(systemName: "plus")
+                                            .foregroundStyle(.white)
+                                            .font(.system(size: 24))
+                                    }
                                 }
                             }
                             .padding(.top, 30)
@@ -694,7 +700,9 @@ struct StakePredictionsView: View {
                     StakeMainView()
                 }
                 .onAppear {
-                    stakePredictionsModel.fetchPredictions()
+                    if !UserDefaultsManager().isGuest() {
+                        stakePredictionsModel.fetchPredictions()
+                    }
                 }
             } else {
                 

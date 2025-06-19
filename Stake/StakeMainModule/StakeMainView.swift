@@ -443,11 +443,7 @@ struct StakeMainView: View {
                                     .offset(y: -70)
                                 }
                                 .onTapGesture {
-                                    if UserDefaultsManager().isGuest() {
-                                        stakeMainModel.isGuestTapped = true
-                                    } else {
-                                        stakeMainModel.isMyNotes = true
-                                    }
+                                    stakeMainModel.isMyNotes = true
                                 }
                                 
                                 ZStack {
@@ -559,11 +555,7 @@ struct StakeMainView: View {
                                     .offset(y: -70)
                                 }
                                 .onTapGesture {
-                                    if UserDefaultsManager().isGuest() {
-                                        stakeMainModel.isGuestTapped = true
-                                    } else {
-                                        stakeMainModel.isMyPredictions = true
-                                    }
+                                    stakeMainModel.isMyPredictions = true
                                 }
                                 
                                 ZStack {

@@ -84,8 +84,11 @@ struct StakeSignInView: View {
                                         Button(action: {
                                             stakeSignInModel.register { success in
                                                 if success {
-                                                    stakeSignInModel.isLog = true
-                                                    print("YES")
+                                                    stakeSignInModel.isSkip = true
+                                                    UserDefaultsManager().saveName(stakeSignInModel.name)
+                                                    UserDefaultsManager().savePassword(stakeSignInModel.password)
+                                                    UserDefaultsManager().saveCurrentEmail(stakeSignInModel.email)
+                                                    UserDefaultsManager().saveLoginStatus(true)
                                                 }
                                             }
                                         }) {
@@ -207,8 +210,11 @@ struct StakeSignInView: View {
                                     Button(action: {
                                         stakeSignInModel.register { success in
                                             if success {
-                                                stakeSignInModel.isLog = true
-                                                print("YES")
+                                                stakeSignInModel.isSkip = true
+                                                UserDefaultsManager().saveName(stakeSignInModel.name)
+                                                UserDefaultsManager().savePassword(stakeSignInModel.password)
+                                                UserDefaultsManager().saveCurrentEmail(stakeSignInModel.email)
+                                                UserDefaultsManager().saveLoginStatus(true)
                                             }
                                         }
                                     }) {

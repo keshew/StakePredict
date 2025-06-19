@@ -116,20 +116,22 @@ struct StakeTeamNotesView: View {
                         }
                         .scrollDisabled(UIScreen.main.bounds.height > 380  ? true : false)
                         
-                        Button(action: {
-                            stakeTeamNotesModel.isAdd = true
-                        }) {
-                            Rectangle()
-                                .fill(Color(red: 20/255, green: 117/255, blue: 225/255))
-                                .overlay {
-                                    Image(systemName: "plus")
-                                        .foregroundStyle(.white)
-                                        .font(.system(size: 30, weight: .semibold))
-                                }
-                                .frame(width: 70, height: 65)
-                                .cornerRadius(10)
+                        if !UserDefaultsManager().isGuest() {
+                            Button(action: {
+                                stakeTeamNotesModel.isAdd = true
+                            }) {
+                                Rectangle()
+                                    .fill(Color(red: 20/255, green: 117/255, blue: 225/255))
+                                    .overlay {
+                                        Image(systemName: "plus")
+                                            .foregroundStyle(.white)
+                                            .font(.system(size: 30, weight: .semibold))
+                                    }
+                                    .frame(width: 70, height: 65)
+                                    .cornerRadius(10)
+                            }
+                            .position(x: UIScreen.main.bounds.width / 1.1, y: UIScreen.main.bounds.height / 1.15)
                         }
-                        .position(x: UIScreen.main.bounds.width / 1.1, y: UIScreen.main.bounds.height / 1.15)
                     }
                     .fullScreenCover(isPresented: $stakeTeamNotesModel.isAdd) {
                         StakeCreateTeamNoteView()
