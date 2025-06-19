@@ -8,6 +8,7 @@ class StakeLoginViewModel: ObservableObject {
     
     @Published var showAlert = false
     @Published var alertMessage = ""
+    @Published var isBack = false
     
     func login(completion: @escaping (Bool) -> Void) {
         if email.isEmpty || password.isEmpty {
@@ -26,7 +27,7 @@ class StakeLoginViewModel: ObservableObject {
                     UserDefaultsManager().saveLoginStatus(true)
                     completion(true)
                 case .failure(let error):
-                    self.alertMessage = "Something went wrong."
+                    self.alertMessage = "Incorrect email or password."
                     self.showAlert = true
                     completion(false)
                     print(error)
@@ -34,5 +35,4 @@ class StakeLoginViewModel: ObservableObject {
             }
         }
     }
-
 }

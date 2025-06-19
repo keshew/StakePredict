@@ -11,6 +11,7 @@ class StakeSignInViewModel: ObservableObject {
     
     @Published var showAlert = false
     @Published var alertMessage = ""
+    @Published var isBack = false
     
     func register(completion: @escaping (Bool) -> Void) {
         if name.isEmpty || email.isEmpty || password.isEmpty || confirmPassword.isEmpty {

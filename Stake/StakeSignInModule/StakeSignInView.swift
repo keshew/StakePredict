@@ -26,7 +26,7 @@ struct StakeSignInView: View {
                             VStack(spacing: 30) {
                                 HStack {
                                     Button(action: {
-                                        presentationMode.wrappedValue.dismiss()
+                                        stakeSignInModel.isBack = true
                                     }) {
                                         Image(systemName: "chevron.left")
                                             .foregroundStyle(.white)
@@ -129,6 +129,9 @@ struct StakeSignInView: View {
                     .fullScreenCover(isPresented: $stakeSignInModel.isSkip) {
                         StakeMainView()
                     }
+                    .fullScreenCover(isPresented: $stakeSignInModel.isBack) {
+                        StakeOnboardingView()
+                    }
                     .alert(isPresented: $stakeSignInModel.showAlert) {
                         Alert(
                             title: Text("Error"),
@@ -152,7 +155,7 @@ struct StakeSignInView: View {
                         VStack(spacing: 30) {
                             HStack {
                                 Button(action: {
-                                    presentationMode.wrappedValue.dismiss()
+                                    stakeSignInModel.isBack = true
                                 }) {
                                     Image(systemName: "chevron.left")
                                         .foregroundStyle(.white)
@@ -254,6 +257,9 @@ struct StakeSignInView: View {
                 }
                 .fullScreenCover(isPresented: $stakeSignInModel.isSkip) {
                     StakeMainView()
+                }
+                .fullScreenCover(isPresented: $stakeSignInModel.isBack) {
+                    StakeOnboardingView()
                 }
                 .alert(isPresented: $stakeSignInModel.showAlert) {
                     Alert(
