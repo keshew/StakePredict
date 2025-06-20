@@ -140,7 +140,9 @@ struct StakeTeamNotesView: View {
                         StakeMainView()
                     }
                     .onAppear {
-                        stakeTeamNotesModel.fetchTeamNotes()
+                        if !UserDefaultsManager().isGuest() {
+                            stakeTeamNotesModel.fetchTeamNotes()
+                        }
                     }
                 }
             }
@@ -271,7 +273,9 @@ struct StakeTeamNotesView: View {
                     StakeMainView()
                 }
                 .onAppear {
-                    stakeTeamNotesModel.fetchTeamNotes()
+                    if !UserDefaultsManager().isGuest() {
+                        stakeTeamNotesModel.fetchTeamNotes()
+                    }
                 }
             } else {
                 

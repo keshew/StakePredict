@@ -288,21 +288,21 @@ final class NetworkManager {
         email: String,
         firstTeamName: String,
         secondTeamName: String,
-        firstTeamImage: String,
-        secondTeamImage: String,
+        firstTeamImage: String, // <<-- ВАЖНО: это должна быть строка base64 С ПРЕФИКСОМ!
+        secondTeamImage: String, // <<-- ВАЖНО: это должна быть строка base64 С ПРЕФИКСОМ!
         date: Date,
         textOfPrediction: String,
         completion: @escaping (Result<String, Error>) -> Void
     ) {
         let formatter = ISO8601DateFormatter()
-        let dateString = formatter.string(from: date)
+        let dateString = formatter.string(from: date) // Форматирует дату в строку ISO 8601
         let body: [String: Any] = [
             "metod": "addPrediction",
             "email": email,
             "firstTeamName": firstTeamName,
             "secondTeamName": secondTeamName,
-            "firstTeamImage": firstTeamImage,
-            "secondTeamImage": secondTeamImage,
+            "firstTeamImage": firstTeamImage, // Передаётся строка как есть
+            "secondTeamImage": secondTeamImage, // Передаётся строка как есть
             "date": dateString,
             "textOfPrediction": textOfPrediction
         ]

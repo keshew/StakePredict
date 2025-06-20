@@ -51,26 +51,26 @@ struct StakeCreateTeamNoteView: View {
                                     .overlay {
                                         VStack(spacing: 5) {
                                             HStack(spacing: -5) {
-                                                Button(action: {
-                                                    isImagePickerPresented = true
-                                                }) {
-                                                    if let image = selectedImage {
-                                                        Image(uiImage: image)
-                                                            .resizable()
-                                                            .aspectRatio(contentMode: .fill)
-                                                            .frame(width: 35, height: 35)
-                                                            .clipShape(RoundedRectangle(cornerRadius: 35 / 2))
-                                                            .padding(.leading)
-                                                    } else {
-                                                        Image(.choosePhoto)
-                                                            .resizable()
-                                                            .frame(width: 35, height: 35)
-                                                            .padding(.leading)
-                                                    }
-                                                }
-                                                .sheet(isPresented: $isImagePickerPresented) {
-                                                    ImagePicker(image: $selectedImage, isPresented: $isImagePickerPresented)
-                                                }
+//                                                Button(action: {
+//                                                    isImagePickerPresented = true
+//                                                }) {
+//                                                    if let image = selectedImage {
+//                                                        Image(uiImage: image)
+//                                                            .resizable()
+//                                                            .aspectRatio(contentMode: .fill)
+//                                                            .frame(width: 35, height: 35)
+//                                                            .clipShape(RoundedRectangle(cornerRadius: 35 / 2))
+//                                                            .padding(.leading)
+//                                                    } else {
+//                                                        Image(.choosePhoto)
+//                                                            .resizable()
+//                                                            .frame(width: 35, height: 35)
+//                                                            .padding(.leading)
+//                                                    }
+//                                                }
+//                                                .sheet(isPresented: $isImagePickerPresented) {
+//                                                    ImagePicker(image: $selectedImage, isPresented: $isImagePickerPresented)
+//                                                }
                                                 
                                                 CustomClearTextField(text: $stakeCreateTeamNoteModel.name, placeholder: "Note title")
                                             }
@@ -181,26 +181,26 @@ struct StakeCreateTeamNoteView: View {
                                 .overlay {
                                     VStack(spacing: 5) {
                                         HStack(spacing: -5) {
-                                            Button(action: {
-                                                isImagePickerPresented = true
-                                            }) {
-                                                if let image = selectedImage {
-                                                    Image(uiImage: image)
-                                                        .resizable()
-                                                        .aspectRatio(contentMode: .fill)
-                                                        .frame(width: 35, height: 35)
-                                                        .clipShape(RoundedRectangle(cornerRadius: 35 / 2))
-                                                        .padding(.leading)
-                                                } else {
-                                                    Image(.choosePhoto)
-                                                        .resizable()
-                                                        .frame(width: 35, height: 35)
-                                                        .padding(.leading)
-                                                }
-                                            }
-                                            .sheet(isPresented: $isImagePickerPresented) {
-                                                ImagePicker(image: $selectedImage, isPresented: $isImagePickerPresented)
-                                            }
+//                                            Button(action: {
+//                                                isImagePickerPresented = true
+//                                            }) {
+//                                                if let image = selectedImage {
+//                                                    Image(uiImage: image)
+//                                                        .resizable()
+//                                                        .aspectRatio(contentMode: .fill)
+//                                                        .frame(width: 35, height: 35)
+//                                                        .clipShape(RoundedRectangle(cornerRadius: 35 / 2))
+//                                                        .padding(.leading)
+//                                                } else {
+//                                                    Image(.choosePhoto)
+//                                                        .resizable()
+//                                                        .frame(width: 35, height: 35)
+//                                                        .padding(.leading)
+//                                                }
+//                                            }
+//                                            .sheet(isPresented: $isImagePickerPresented) {
+//                                                ImagePicker(image: $selectedImage, isPresented: $isImagePickerPresented)
+//                                            }
                                             
                                             CustomClearTextField(text: $stakeCreateTeamNoteModel.name, placeholder: "Note title")
                                         }

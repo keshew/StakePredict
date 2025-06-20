@@ -224,50 +224,52 @@ struct StakeCreatePredictionView: View {
                                             .padding(.horizontal)
                                         
                                         HStack {
-                                            Button(action: {
-                                                isImagePickerPresented = true
-                                            }) {
-                                                if let image = selectedImage {
-                                                    Image(uiImage: image)
-                                                        .resizable()
-                                                        .aspectRatio(contentMode: .fill)
-                                                        .frame(width: 35, height: 35)
-                                                        .clipShape(RoundedRectangle(cornerRadius: 35 / 2))
-                                                } else {
-                                                    Image(.choosePhoto)
-                                                        .resizable()
-                                                        .frame(width: 35, height: 35)
-                                                }
-                                            }
-                                            .sheet(isPresented: $isImagePickerPresented) {
-                                                ImagePicker(image: $selectedImage, isPresented: $isImagePickerPresented)
-                                            }
+//                                            Button(action: {
+//                                                isImagePickerPresented = true
+//                                            }) {
+//                                                if let image = selectedImage {
+//                                                    Image(uiImage: image)
+//                                                        .resizable()
+//                                                        .aspectRatio(contentMode: .fill)
+//                                                        .frame(width: 35, height: 35)
+//                                                        .clipShape(RoundedRectangle(cornerRadius: 35 / 2))
+//                                                } else {
+//                                                    Image(.choosePhoto)
+//                                                        .resizable()
+//                                                        .frame(width: 35, height: 35)
+//                                                }
+//                                            }
+//                                            .sheet(isPresented: $isImagePickerPresented) {
+//                                                ImagePicker(image: $selectedImage, isPresented: $isImagePickerPresented)
+//                                            }
                                             
                                             CustomClearTextField(text: $stakeCreatePredictionModel.firstTeamName, placeholder: "Enter the name of the team or player", textSize: 17, isBold: false)
+                                                .offset(x: -10)
                                             
                                             Text("VS")
                                                 .ProBold(size: 14, color: Color(red: 137/255, green: 141/255, blue: 148/255))
                                             
                                             CustomClearTextField(text: $stakeCreatePredictionModel.secondTeamName, placeholder: "Enter the name of the team or player", textSize: 17, isBold: false)
+                                                .offset(x: 10)
                                             
-                                            Button(action: {
-                                                isImagePickerPresented2 = true
-                                            }) {
-                                                if let image = selectedImage2 {
-                                                    Image(uiImage: image)
-                                                        .resizable()
-                                                        .aspectRatio(contentMode: .fill)
-                                                        .frame(width: 35, height: 35)
-                                                        .clipShape(RoundedRectangle(cornerRadius: 35 / 2))
-                                                } else {
-                                                    Image(.choosePhoto)
-                                                        .resizable()
-                                                        .frame(width: 35, height: 35)
-                                                }
-                                            }
-                                            .sheet(isPresented: $isImagePickerPresented2) {
-                                                ImagePicker(image: $selectedImage2, isPresented: $isImagePickerPresented2)
-                                            }
+//                                            Button(action: {
+//                                                isImagePickerPresented2 = true
+//                                            }) {
+//                                                if let image = selectedImage2 {
+//                                                    Image(uiImage: image)
+//                                                        .resizable()
+//                                                        .aspectRatio(contentMode: .fill)
+//                                                        .frame(width: 35, height: 35)
+//                                                        .clipShape(RoundedRectangle(cornerRadius: 35 / 2))
+//                                                } else {
+//                                                    Image(.choosePhoto)
+//                                                        .resizable()
+//                                                        .frame(width: 35, height: 35)
+//                                                }
+//                                            }
+//                                            .sheet(isPresented: $isImagePickerPresented2) {
+//                                                ImagePicker(image: $selectedImage2, isPresented: $isImagePickerPresented2)
+//                                            }
                                         }
                                         .padding(.horizontal)
                                         .padding(.top, 12)
@@ -312,20 +314,12 @@ struct StakeCreatePredictionView: View {
                         }
                         
                         Button(action: {
-                            if let image1 = selectedImage, let image2 = selectedImage2 {
-                                let jpegQuality: CGFloat = 0.0001
-                                if let jpegData1 = image1.jpegData(compressionQuality: jpegQuality),
-                                   let jpegData2 = image2.jpegData(compressionQuality: jpegQuality) {
-                                    let image1 = UIImage(data: jpegData1)
-                                       let image2 = UIImage(data: jpegData2)
-                                    stakeCreatePredictionModel.savePrediction(
-                                        firstTeamImage: image1,
-                                        secondTeamImage: image2
-                                    ) { success in
-                                        if success {
-                                            stakeCreatePredictionModel.isBack = true
-                                        }
-                                    }
+                            stakeCreatePredictionModel.savePrediction(
+                                firstTeamImage: selectedImage,
+                                secondTeamImage: selectedImage2
+                            ) { success in
+                                if success {
+                                    stakeCreatePredictionModel.isBack = true
                                 }
                             }
                         }) {
